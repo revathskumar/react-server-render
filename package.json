@@ -40,7 +40,8 @@
     "esnext": true,
     "space": 2,
     "globals": [
-      "document"
+      "document",
+      "fetch"
     ],
     "extends": [
       "xo",
