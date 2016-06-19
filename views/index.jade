@@ -1,5 +1,6 @@
 extends layout
 
 block content
-  h1= title
-  div#app
+  script(type='text/javascript').
+    window.__INITIAL_STATE__ = !{JSON.stringify(data)}
+  div.container#app!= content
