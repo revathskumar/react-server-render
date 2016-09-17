@@ -14,8 +14,7 @@ module.exports = {
         test: /\.jsx?$/,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015'],
-          plugins: ['transform-object-assign']
+          presets: ['react', 'es2015']
         }
       }
     ]
