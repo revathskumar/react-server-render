@@ -27,11 +27,21 @@ class List extends Component {
 
   render() {
     return (
-      <ul>
-        {this.state.items.map(item => {
-          return <li key={item.id}>{item.name}</li>;
-        })}
-      </ul>
+      <div className="demo-list-action mdl-list">
+        {
+          this.state.items.map(item => {
+            return (
+              <div key={item.id} className="mdl-list__item">
+                <span className="mdl-list__item-primary-content">
+                  <i className="material-icons mdl-list__item-avatar">person</i>
+                  <span>{item.name}</span>
+                </span>
+                <a className="mdl-list__item-secondary-action" href="#"><i className="material-icons">star</i></a>
+              </div>
+            )
+          })
+        }
+      </div>
     );
   }
 }
