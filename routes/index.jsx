@@ -36,7 +36,7 @@ router.get('/', (req, res) => {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search);
     } else if (renderProps) {
       const content = renderToString(<RouterContext {...renderProps}/>);
-      res.render('index', {title: 'Express', content});
+      res.render('index', {title: 'Express', data: false, content});
     } else {
       res.status(404).send('Not Found');
     }
@@ -51,7 +51,7 @@ router.get('/home', (req, res) => {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search);
     } else if (renderProps) {
       const content = renderToString(<RouterContext {...renderProps}/>);
-      res.render('index', {title: 'Express', content});
+      res.render('index', {title: 'Express', data: false, content});
     } else {
       res.status(404).send('Not Found');
     }
