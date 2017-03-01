@@ -1,11 +1,15 @@
 var path = require('path');
 
 module.exports = {
-  entry: './client/app.jsx',
+  entry: './src/client/app.jsx',
 
   output: {
     filename: 'app.js',
     path: path.join('public/javascripts/')
+  },
+
+  resolve: {
+    extensions: ['', '.js', '.jsx']
   },
 
   module: {
