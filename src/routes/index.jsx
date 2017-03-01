@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import {renderToString} from 'react-dom/server';
 import {RouterContext, match, createRoutes} from 'react-router';
 
-import appRouter from '../client/router.jsx';
+import appRouter from '../client/router';
 
 const routes = createRoutes(appRouter());
 

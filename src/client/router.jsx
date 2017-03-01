@@ -1,9 +1,9 @@
 import React from 'react';
 import {Router, browserHistory, Route} from 'react-router';
 
-import AppRoot from './app-root.jsx';
-import Home from './home.jsx';
-import List from './list.jsx';
+import AppRoot from './app-root';
+import Home from './home';
+import List from './list';
 
 const AppRouter = () => {
   return (
