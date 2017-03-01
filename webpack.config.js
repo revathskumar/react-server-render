@@ -9,17 +9,14 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015']
-        }
+        use: 'babel-loader'
       }
     ]
   }
