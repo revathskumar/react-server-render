@@ -1,11 +1,25 @@
 import React from 'react';
 import {render} from 'react-dom';
-// import {Router, history, match} from 'react-router';
+import BrowserRouter from 'react-router-dom/BrowserRouter';
+import { renderRoutes } from 'react-router-config';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
 
-import AppRouter from './router';
+import routes from './routes';
+import reducers from './modules';
 
-// match({history, routes}, (error, redirectLocation, renderProps) => {
-// //   render(<Router {...renderProps}/>, document.querySelector('#app'));
-// });
-render(<AppRouter/>, document.querySelector('#app'));
+const store = createStore(reducers, window.__INITIAL_STATE__, applyMiddleware(thunk));
+
+const AppRouter = () => {
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
+        {renderRoutes(routes)}
+      </BrowserRouter>
+    </Provider>
+  )
+}
+
+render(<AppRouter />, document.querySelector('#app'));
 

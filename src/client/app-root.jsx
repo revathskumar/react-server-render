@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router';
+import Link from 'react-router-dom/Link';
+import Route from 'react-router-dom/Route';
+import { renderRoutes } from 'react-router-config';
 
 class AppRoot extends Component {
   render() {
@@ -25,7 +27,7 @@ class AppRoot extends Component {
           </nav>
         </div>
         <main className="mdl-layout__content">
-          {this.props.children}
+          {renderRoutes(this.props.route.routes)}
         </main>
       </div>
     );

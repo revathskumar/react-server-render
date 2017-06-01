@@ -1,35 +1,26 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+
+import 'isomorphic-fetch';
+
+import { fetchUsers } from './modules/users';
 
 class List extends Component {
-  constructor(props, context) {
-    super(props, context);
-    this.state = this.context.data || window.__INITIAL_STATE__ || {items: []};
+  static fetchData(store) {
+    return store.dispatch(fetchUsers());
   }
 
   componentDidMount() {
-    this.fetchList();
-  }
-
-  fetchList() {
-    fetch('http://jsonplaceholder.typicode.com/users')
-      .then(res => {
-        return res.json();
-      })
-      .then(data => {
-        this.setState({
-          items: data
-        });
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    this.props.fetchUsers();
   }
 
   render() {
     return (
       <div className="demo-list-action mdl-list">
         {
-          this.state.items.map(item => {
+          this.props.items.map(item => {
             return (
               <div key={item.id} className="mdl-list__item">
                 <span className="mdl-list__item-primary-content">
@@ -46,8 +37,7 @@ class List extends Component {
   }
 }
 
-List.contextTypes = {
-  data: React.PropTypes.object
-};
+const mapStateToProps = (state) => ({items: state.users.items});
+const mapDispatchToProps = (dispatch) => bindActionCreators({ fetchUsers }, dispatch);
 
-export default List;
+export default connect(mapStateToProps, mapDispatchToProps)(List);
