@@ -38,6 +38,9 @@ router.get('*', (req, res) => {
     if (context.status === 404) {
       res.status(404);
     }
+    if (context.status === 302) {
+      return res.redirect(302, context.url);
+    }
     res.render('index', {title: 'Express', data: store.getState(), content });
   });
 });

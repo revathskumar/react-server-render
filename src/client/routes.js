@@ -2,6 +2,7 @@ import AppRoot from './app-root';
 import Home from './home';
 import List from './list';
 import NotFound from './notfound';
+import ListToUsers from './listtousers';
 
 const routes = [
   { component: AppRoot,
@@ -14,6 +15,9 @@ const routes = [
         component: Home
       },
       { path: '/list',
+        component: ListToUsers
+      },
+      { path: '/users',
         component: List
       },
       {

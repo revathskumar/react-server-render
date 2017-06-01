@@ -13,7 +13,8 @@ class AppRoot extends Component {
             <div className="mdl-layout-spacer"></div>
             <nav className="mdl-navigation">
               <Link className="mdl-navigation__link" to="/home"> Home </Link>
-              <Link className="mdl-navigation__link" to="/list"> List </Link>
+              <Link className="mdl-navigation__link" to="/list"> Redirect </Link>
+              <Link className="mdl-navigation__link" to="/users"> Users </Link>
               <Link className="mdl-navigation__link" to="/404"> 404 </Link>
               <Link className="mdl-navigation__link" to="/about"> About </Link>
             </nav>
@@ -23,7 +24,8 @@ class AppRoot extends Component {
           <span className="mdl-layout-title">React Universal App (SSR + SW)</span>
           <nav className="mdl-navigation">
             <Link className="mdl-navigation__link" to="/home"> Home </Link>
-            <Link className="mdl-navigation__link" to="/list"> List </Link>
+            <Link className="mdl-navigation__link" to="/list"> Redirect </Link>
+            <Link className="mdl-navigation__link" to="/users"> Users </Link>
             <Link className="mdl-navigation__link" to="/404"> 404 </Link>
             <Link className="mdl-navigation__link" to="/about"> About </Link>
           </nav>
