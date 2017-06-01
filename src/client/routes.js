@@ -1,6 +1,7 @@
 import AppRoot from './app-root';
 import Home from './home';
 import List from './list';
+import NotFound from './notfound';
 
 const routes = [
   { component: AppRoot,
@@ -14,6 +15,10 @@ const routes = [
       },
       { path: '/list',
         component: List
+      },
+      {
+        path: '*',
+        component: NotFound
       }
     ]
   }

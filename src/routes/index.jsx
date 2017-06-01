@@ -35,6 +35,9 @@ router.get('*', (req, res) => {
         </StaticRouter>
       </Provider>
     );
+    if (context.status === 404) {
+      res.status(404);
+    }
     res.render('index', {title: 'Express', data: store.getState(), content });
   });
 });

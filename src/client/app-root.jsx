@@ -14,6 +14,7 @@ class AppRoot extends Component {
             <nav className="mdl-navigation">
               <Link className="mdl-navigation__link" to="/home"> Home </Link>
               <Link className="mdl-navigation__link" to="/list"> List </Link>
+              <Link className="mdl-navigation__link" to="/404"> 404 </Link>
               <Link className="mdl-navigation__link" to="/about"> About </Link>
             </nav>
           </div>
@@ -23,6 +24,7 @@ class AppRoot extends Component {
           <nav className="mdl-navigation">
             <Link className="mdl-navigation__link" to="/home"> Home </Link>
             <Link className="mdl-navigation__link" to="/list"> List </Link>
+            <Link className="mdl-navigation__link" to="/404"> 404 </Link>
             <Link className="mdl-navigation__link" to="/about"> About </Link>
           </nav>
         </div>
