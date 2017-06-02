@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "DEBUG=server-render/* nodemon ./bin/www",
-    "build": "rm -rf dist/ && babel --watch src/ -d dist/",
+    "build:watch": "rm -rf dist/ && babel --watch src/ -d dist/",
+    "build": "rm -rf dist/ && babel src/ -d dist/ && webpack -p",
     "webpack:server": "webpack --debug --devtool=eval --watch"
   },
   "dependencies": {
