@@ -8,7 +8,7 @@
 
 ## Using React Router v4
 
-Work in progress on branch [react-router-v4-redux](https://github.com/revathskumar/react-server-render/tree/react-router-v4-redux)
+Work in progress on branch [react-router-v4-redux](https://github.com/revathskumar/react-server-render/tree/react-router-v4-redux)  
 A demo app is hosted on https://server-render-hzoyerpkgh.now.sh
 
 ## Usage
